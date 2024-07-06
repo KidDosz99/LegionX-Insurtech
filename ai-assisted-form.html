@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Assisted Insurance Form | Insurancy</title>
+    <meta name="description" content="AI-assisted form for getting personalized insurance recommendations.">
+    <meta name="keywords" content="AI, insurance, form, personalized recommendations">
+    <meta name="author" content="Insurancy">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/legionxshield.png">
+
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Ionic icons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Jquery CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="">
+    <!-- Scroll to top starts -->
+    <button id="topBtn">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+    <!-- Scroll to top ends -->
+
+    <!-- Navigation starts -->
+    <nav>
+        <div class="menu-container nav-wrapper">
+            <div class="brand">
+                <a href="index.html">
+                    <img src="img/legionxinsurtech.png" alt="insurancy-logo" border="0">
+                </a>
+            </div>
+
+            <div class="hamberger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <a href="insurance.html">Insurance</a>
+                    <ul class="dropdown-list">
+                        <li><a href="insurance-details.html">Health Policy</a></li>
+                        <li><a href="insurance-details.html">Auto Policy</a></li>
+                        <li><a href="insurance-details.html">Home Policy</a></li>
+                        <li><a href="insurance-details.html">Life Policy</a></li>
+                        <li><a href="insurance-details.html">Travel Policy</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="ai-support-form.html">AI Support Form</a></li>
+                <li>
+                    <button class="btn btn-blue">
+                        <a href="tel:+6011-60670595">+6011-60670595</a>
+                    </button>
+                </li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+    </nav>
+    <!-- Navigation ends -->
+
+    <!-- AI-Assisted Form section starts -->
+    <section class="ai-form">
+        <div class="container">
+            <h2 class="heading">AI-Assisted Insurance Form</h2>
+            <p class="intro">Get personalized insurance recommendations by filling out the form below. Our AI will
+                analyze your inputs and provide you with the best insurance options tailored to your needs.</p>
+
+            <form id="insurance-form">
+                <div class="input-field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Your age" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="coverage">Type of Coverage</label>
+                    <select id="coverage" name="coverage" required>
+                        <option value="health">Health Insurance</option>
+                        <option value="auto">Auto Insurance</option>
+                        <option value="home">Home Insurance</option>
+                        <option value="life">Life Insurance</option>
+                        <option value="travel">Travel Insurance</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="budget">Budget</label>
+                    <input type="number" id="budget" name="budget" placeholder="Your budget" required>
+                </div>
+
+                <button type="submit" class="btn btn-blue">Get Recommendations</button>
+            </form>
+
+            <div id="ai-response" class="ai-response hidden">
+                <h3>Recommended Policies</h3>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+    </section>
+    <!-- AI-Assisted Form section ends -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p class="para-line white">Copyright © 2022</p>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+
+    <!-- External JS file -->
+    <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#insurance-form').on('submit', function (e) {
+                e.preventDefault();
+
+                const formData = {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    age: $('#age').val(),
+                    coverage: $('#coverage').val(),
+                    budget: $('#budget').val()
+                };
+
+                $.ajax({
+                    url: 'your-backend-endpoint', // Replace with your backend endpoint
+                    type: 'POST',
+                    data: JSON.stringify(formData),
+                    contentType: 'application/json',
+                    success: function (response) {
+                        $('#ai-response').removeClass('hidden');
+                        $('#recommendations').html(response.recommendations);
+                    },
+                    error: function (error) {
+                        alert('There was an error processing your request. Please try again.');
+                    }
+                });
+            });
+        });
+
+        // Scroll to top button script
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 40) {
+                $('#topBtn').fadeIn();
+            } else {
+                $('#topBtn').fadeOut();
+            }
+        });
+
+        $("#topBtn").click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+        });
+    </script>
+</body>
+
+</html>
