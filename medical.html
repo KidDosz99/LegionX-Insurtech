@@ -89,7 +89,7 @@
 			</div>
 
 			<ul class="nav-list">
-
+				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
 				<!--	<li>
 					<a href="insurance.html">Insurance</a>
@@ -115,27 +115,41 @@
 
 	<!-- --------------------------- News ---------------------------- -->
 	<section class="news">
-		<div class="cards">
-            <!-- Personal card -->
-            <a href="personal.html" class="card">
-                <h3>Personal</h3>
-                <p>Manage your personal expenses efficiently.</p>
-            </a>
-            
-            <!-- Medical card -->
-            <a href="medical.html" class="card">
-                <h3>Medical</h3>
-                <p>Budget for medical expenses and healthcare costs.</p>
-            </a>
-            
-            <!-- Vehicle card -->
-            <a href="vehicle.html" class="card">
-                <h3>Vehicle</h3>
-                <p>Track expenses related to your vehicle.</p>
-            </a>
+		<div class="progress-container">
+			<div class="step active">
+				<div class="circle">1</div>
+				<div class="label">Gender</div>
+				<button class="next-button" onclick="navigateTo('step2.html')">Next</button>
+			</div>
+			<div class="line"></div>
+			<div class="step">
+				<div class="circle">2</div>
+				<div class="label">Step 2</div>   
+			</div>
+			<div class="line"></div>
+			<div class="step">
+				<div class="circle">3</div>
+				<div class="label">Step 3</div>   
+			</div>
+			<div class="line"></div>
+			<div class="step">
+				<div class="circle">4</div>
+				<div class="label">Step 4</div>  
+			</div>
+		</div>
 
-            <!-- Add another card here if needed -->
-        </div>
+		<div class="middle-container">
+			<p>Gender</p>
+		<label>
+			<input type="radio" name="gender" value="male" checked>
+			Male
+		</label>
+		<label>
+			<input type="radio" name="gender" value="female">
+			Female
+		</label>
+		</div>
+		<button class="next-button" onclick="navigateTo('step2.html')">Next</button>   
 	</section>
 	<!-- --------------------------- News ---------------------------- -->
 
@@ -170,6 +184,10 @@
 				$('html, body').animate({ scrollTop: 0 }, 800);
 			});
 		});
+
+		function navigateTo(url) {
+            window.location.href = url;
+        }
 	</script>
 </body>
 
