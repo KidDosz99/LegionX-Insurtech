@@ -1,14 +1,12 @@
 /*------------------ Breadcrumb styling --------------------*/
-.breadcrumbs
-{
-	background: linear-gradient(rgba(150, 60, 221, 0.1), rgba(17, 17, 69, 0.8)), url('../img/about-bread.png');
+.breadcrumbs {
+	background: linear-gradient(rgba(150, 60, 221, 0.1), rgba(17, 17, 69, 0.8)), url('../img/satu.png');
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.breadcrumb-container
-{
+.breadcrumb-container {
 	height: 34vh;
 	display: flex;
 	justify-content: center;
@@ -16,74 +14,66 @@
 	padding: 0 1.5rem;
 }
 
-.breadcrumb-container .hero-heading
-{
+.breadcrumb-container .hero-heading {
 	font-size: 3rem;
 }
+
 /*------------------ Breadcrumb styling --------------------*/
 
 
 /*------------------ Future protection styling ----------------*/
-.future-protection-imgs
-{
+.future-protection-imgs {
 	margin: 2rem 0;
 }
 
-.future-protection-img
-{
+.future-protection-img {
 	border-radius: 6px;
 }
+
 /*------------------ Future protection styling ----------------*/
 
 
 
 /*----------------------- Company value --------------------------*/
-.values .container
-{
+.values .container {
 	text-align: center;
 }
 
-.value
-{
+.value {
 	margin: 3.6rem 0;
 }
 
-.value ion-icon
-{
+.value ion-icon {
 	color: var(--yellow-color);
 	font-size: 2.6rem;
 }
 
-.value .value-heading
-{
+.value .value-heading {
 	font-size: 1.4rem;
 	font-weight: 600;
 }
+
 /*----------------------- Company value --------------------------*/
 
 
 
 /*----------------------------- Key Numbers ------------------------------*/
-.key-numbers
-{
+.key-numbers {
 	background: linear-gradient(rgba(10, 17, 79, 0.9), rgba(10, 17, 79, 0.9)), url("../img/hero-bg.jpg");
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.key-num-row
-{
+.key-num-row {
 	margin: 3rem 0;
 }
 
-.key-no-img
-{
+.key-no-img {
 	border-radius: 6px;
 }
 
-.key-number
-{
+.key-number {
 	margin: 2rem 0;
 	padding: 1rem;
 	background: #ffffff;
@@ -91,85 +81,77 @@
 	text-align: center;
 }
 
-.key-number .heading
-{
+.key-number .heading {
 	font-size: 2.2rem;
 	line-height: 1;
 }
 
-.key-number .para-line
-{
+.key-number .para-line {
 	font-weight: 600;
 	text-transform: uppercase;
 }
+
 /*----------------------------- Key Numbers ------------------------------*/
 
 
 
 
 /*------------------------------- Highlights --------------------------------*/
-.highlight
-{
+.highlight {
 	margin: 2.8rem 0;
 	display: flex;
 	flex-direction: column;
 	gap: 0.6rem;
 }
 
-.highlight ion-icon
-{
+.highlight ion-icon {
 	color: var(--yellow-color);
 	font-size: 3.2rem;
 }
 
-.highlight-heading
-{
+.highlight-heading {
 	font-size: 1.4rem;
 	font-weight: 600;
 }
+
 /*------------------------------- Highlights --------------------------------*/
 
 
 
 /*------------------------------- Our Team -------------------------------------*/
-.team-members
-{
+.team-members {
 	margin: 2rem 0;
 	display: flex;
 	flex-direction: column;
 	gap: 4rem;
 }
 
-.team-member .member-img
-{
+.team-member .member-img {
 	border-radius: 6px;
 }
 
-.team-member .member-content
-{
+.team-member .member-content {
 	padding: 1rem;
 }
 
-.team-member .member-designation
-{
+.team-member .member-designation {
 	font-size: 0.8rem;
 	font-weight: 500;
 	text-transform: uppercase;
 }
 
-.team-member .member-name
-{
+.team-member .member-name {
 	font-size: 1.6rem;
 	font-weight: 600;
 	margin: 0.6rem 0;
 }
+
 /*------------------------------- Our Team -------------------------------------*/
 
 
 
 /*--------------------------------- About CTA -------------------------------------*/
-.about-cta
-{
+.about-cta {
 	background: linear-gradient(rgba(10, 17, 79, 0.9), rgba(10, 17, 79, 0.9)), url("../img/hero-bg.jpg");
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -177,12 +159,12 @@
 	text-align: center;
 }
 
-.about-cta .container .row
-{
+.about-cta .container .row {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 }
+
 /*--------------------------------- About CTA -------------------------------------*/
 
 
@@ -194,29 +176,25 @@
 /*-----------------------------------------------------------------------------------------*/
 /*-------------------------------- Desktop screen styling --------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
-@media screen and (min-width: 789px)
-{
+@media screen and (min-width: 789px) {
+
 	/*----------- Breadcrumb styling ----------*/
-	.breadcrumb-container 
-	{
+	.breadcrumb-container {
 		height: 50vh;
 	}
 
 
 	/*-------------- Future styling --------------*/
-	.future .container
-	{
+	.future .container {
 		text-align: center;
 	}
 
-	.future .para-line
-	{
+	.future .para-line {
 		max-width: 1050px;
 		margin: 0 auto;
 	}
 
-	.future-protection-imgs
-	{
+	.future-protection-imgs {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -225,8 +203,7 @@
 
 
 	/*------------------------ Company values -----------------------*/
-	.company-values
-	{
+	.company-values {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -235,69 +212,62 @@
 
 
 	/*------------------------- Key Numbers ---------------------------*/
-	.key-numbers .container .para-line
-	{
+	.key-numbers .container .para-line {
 		max-width: 800px;
 	}
 
-	.key-num-row
-	{
+	.key-num-row {
 		justify-content: center;
 		align-items: flex-start;
 	}
 
-	.key-num-2-col
-	{
+	.key-num-2-col {
 		margin-top: 4rem;
 	}
 
 
 	/*------------------------------- Highlights -------------------------------*/
-	.company-highlights .container
-	{
+	.company-highlights .container {
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
 		grid-template-columns: repeat(3, 1fr);
 		gap: 4rem;
 	}
+
 	/*------------------------------- Highlights -------------------------------*/
 
 
 
 	/*------------------------------------- Our team ----------------------------*/
-	.our-team .container
-	{
+	.our-team .container {
 		text-align: center;
 	}
 
-	.team-members
-	{
+	.team-members {
 		flex-direction: row;
 	}
 
-	.team-member .member-content
-	{
+	.team-member .member-content {
 		text-align: left;
 	}
+
 	/*------------------------------------- Our team ----------------------------*/
 
 
 
 	/*------------------------------------ About CTA ----------------------------*/
-	.about-cta .container .row
-	{
+	.about-cta .container .row {
 		flex-direction: row;
 	}
 
-	.cta-content-col
-	{
+	.cta-content-col {
 		width: 160%;
 		text-align: left;
 	}
 
-	.cta-btn-col
-	{
+	.cta-btn-col {
 		width: 40% !important;
 	}
+
 	/*------------------------------------ About CTA ----------------------------*/
 }
